@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-guitar" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/09/26/guitar/" class="article-date">
+  <time datetime="2022-09-26T00:01:19.000Z" itemprop="datePublished">2022-09-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/26/guitar/">guitar</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://tva1.sinaimg.cn/large/008gLLJzgy1h6jorn8x2sj30kh0ratbh.jpg" alt="平凡之路"></p>
+<p><img src="http://tva1.sinaimg.cn/large/008gLLJzgy1h6jou5fb10j30o30d9my3.jpg" alt="小情歌"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/26/guitar/" data-id="clhdfyci90008m0th0gj63nhu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ros" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/09/21/ros/" class="article-date">
+  <time datetime="2022-09-21T02:40:32.000Z" itemprop="datePublished">2022-09-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/21/ros/">ros</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h3><p>cd xxx<br>sudo dpkg -i xxx.deb<br>sudo apt-get install -f # Install dependencies</p>
+<h3 id="terminator"><a href="#terminator" class="headerlink" title="terminator"></a>terminator</h3><p>sudo apt install terminator</p>
+<h3 id="create-package"><a href="#create-package" class="headerlink" title="create package"></a>create package</h3><p>cd<br>mkdir test_ws&#x2F;src-p<br>cd test_ws&#x2F;src<br>catkin create pkg test1 roscpp #创建一个ros package 功能包 添加依赖<br>cd..<br>catkin make<br>source devel&#x2F;setup.bash         #刷新环不境。仅限于当前终端窗口，若希望每次默认加载，需要配置到~.bashrc文件中<br>roscd testl                     #验证程序包是否成功编译安装，如果能跳转专到test1目录下，即为成功</p>
+<p>catkin 编译之前需要回到工作空间目录，catkin make 在其他路径下编译不会成功。编译完成后，<br>一定要使用 source命令刷新环境，使得系统能够找到新生成的 ROS 可执行文件，否则将出现无法找到可执行文件等错误。</p>
+<p>仅编译某个包：<br>catkin_ make -pkg ROS 包名</p>
+<p>编译好并配置环境的package包能够使用ros文件系统工具roscd（相当于cd的改进版）找到。<br>rosed ROS包名 可以跳转到ros包的目录下，且输入10s包名时，支持TAB键自动补齐</p>
+<h3 id="topic"><a href="#topic" class="headerlink" title="topic"></a>topic</h3><p>catkin_make<br>roscore<br>rosrun package2 publish  让具体的文件运行起来 区别于launch<br>rostopic echo chatter      rosrun package^^^ 节点名称<br>rosrun package2 subscribe</p>
+<h3 id="service"><a href="#service" class="headerlink" title="service"></a>service</h3><p>rosservice call sound[space][Tab]</p>
+<h3 id="turtle"><a href="#turtle" class="headerlink" title="turtle"></a>turtle</h3><p>cd<br>roscore<br>rosrun turtlesim turtlesim_node<br>cd ros_ws<br>rosrun package2 publish_turtle<br>rosrun package2 subscribe_turtle</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/csdnmll/article/details/95949370">https://blog.csdn.net/csdnmll/article/details/95949370</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.voycn.com/article/rosbiji38-xbox360shoubingkongzhiyidong">http://www.voycn.com/article/rosbiji38-xbox360shoubingkongzhiyidong</a></p>
+<p>passwd -d root</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/21/ros/" data-id="clhdfycib0009m0th6h6e9tjg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-configure" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/09/19/configure/" class="article-date">
+  <time datetime="2022-09-19T14:04:38.000Z" itemprop="datePublished">2022-09-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/19/configure/">configure</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h1><p>navname: yeae’s Blog</p>
+<h1 id="navigatior-items"><a href="#navigatior-items" class="headerlink" title="navigatior items"></a>navigatior items</h1><p>nav:<br>  Posts: &#x2F;archives<br>  Categories: &#x2F;category<br>  Tags: &#x2F;tag<br>  About: &#x2F;about</p>
+<h1 id="favicon"><a href="#favicon" class="headerlink" title="favicon"></a>favicon</h1><p>favicon: <a target="_blank" rel="noopener" href="http://tva1.sinaimg.cn/large/008gLLJzgy1h6c9ex6sq6j30u00u074e.jpg">http://tva1.sinaimg.cn/large/008gLLJzgy1h6c9ex6sq6j30u00u074e.jpg</a></p>
+<h1 id="favicon-x2F-favicon-ico"><a href="#favicon-x2F-favicon-ico" class="headerlink" title="favicon: &#x2F;favicon.ico"></a>favicon: &#x2F;favicon.ico</h1><h1 id="Profile"><a href="#Profile" class="headerlink" title="Profile"></a>Profile</h1><p>nickname: Qitian</p>
+<h3 id="this-variable-is-MarkDown-form"><a href="#this-variable-is-MarkDown-form" class="headerlink" title="this variable is MarkDown form."></a>this variable is MarkDown form.</h3><p>description:  Stay hungry <br>Stay foolish<br>avatar: <a target="_blank" rel="noopener" href="http://tva1.sinaimg.cn/large/008gLLJzgy1h6c9b5e596j30rs0rs750.jpg">http://tva1.sinaimg.cn/large/008gLLJzgy1h6c9b5e596j30rs0rs750.jpg</a></p>
+<h1 id="avatar-x2F-image-x2F-avatar-jpg"><a href="#avatar-x2F-image-x2F-avatar-jpg" class="headerlink" title="avatar: &#x2F;image&#x2F;avatar.jpg"></a>avatar: &#x2F;image&#x2F;avatar.jpg</h1><h1 id="main-menu-navigation"><a href="#main-menu-navigation" class="headerlink" title="main menu navigation"></a>main menu navigation</h1><h2 id="links-key-words-should-not-be-changed"><a href="#links-key-words-should-not-be-changed" class="headerlink" title="links key words should not be changed."></a>links key words should not be changed.</h2><h2 id="Complete-url-after-key-words"><a href="#Complete-url-after-key-words" class="headerlink" title="Complete url after key words."></a>Complete url after key words.</h2><h2 id="Unused-key-can-be-commented-out"><a href="#Unused-key-can-be-commented-out" class="headerlink" title="Unused key can be commented out."></a>Unused key can be commented out.</h2><p>links:<br>  Blog: &#x2F;archives</p>
+<h1 id="Category"><a href="#Category" class="headerlink" title="Category:"></a>Category:</h1><h1 id="Tags"><a href="#Tags" class="headerlink" title="Tags:"></a>Tags:</h1><h1 id="Link"><a href="#Link" class="headerlink" title="Link:"></a>Link:</h1><h1 id="Resume"><a href="#Resume" class="headerlink" title="Resume:"></a>Resume:</h1><h1 id="Publish"><a href="#Publish" class="headerlink" title="Publish:"></a>Publish:</h1><h1 id="Trophy"><a href="#Trophy" class="headerlink" title="Trophy:"></a>Trophy:</h1><h1 id="Gallery"><a href="#Gallery" class="headerlink" title="Gallery:"></a>Gallery:</h1><h1 id="RSS"><a href="#RSS" class="headerlink" title="RSS:"></a>RSS:</h1><h1 id="AliPay"><a href="#AliPay" class="headerlink" title="AliPay:"></a>AliPay:</h1><h1 id="ZhiHu-https-www-zhihu-com-people-sirice"><a href="#ZhiHu-https-www-zhihu-com-people-sirice" class="headerlink" title="ZhiHu: https://www.zhihu.com/people/sirice"></a>ZhiHu: <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/sirice">https://www.zhihu.com/people/sirice</a></h1><h1 id="LinkedIn"><a href="#LinkedIn" class="headerlink" title="LinkedIn:"></a>LinkedIn:</h1><h1 id="FaceBook"><a href="#FaceBook" class="headerlink" title="FaceBook:"></a>FaceBook:</h1><h1 id="Twitter"><a href="#Twitter" class="headerlink" title="Twitter:"></a>Twitter:</h1><h1 id="Skype"><a href="#Skype" class="headerlink" title="Skype:"></a>Skype:</h1><h1 id="CodeSandBox"><a href="#CodeSandBox" class="headerlink" title="CodeSandBox:"></a>CodeSandBox:</h1><h1 id="CodePen"><a href="#CodePen" class="headerlink" title="CodePen:"></a>CodePen:</h1><h1 id="Sketch"><a href="#Sketch" class="headerlink" title="Sketch:"></a>Sketch:</h1><h1 id="Gitlab"><a href="#Gitlab" class="headerlink" title="Gitlab:"></a>Gitlab:</h1><h1 id="Dribbble"><a href="#Dribbble" class="headerlink" title="Dribbble:"></a>Dribbble:</h1><p>  Instagram:</p>
+<h1 id="Reddit"><a href="#Reddit" class="headerlink" title="Reddit:"></a>Reddit:</h1><h1 id="YouTube"><a href="#YouTube" class="headerlink" title="YouTube:"></a>YouTube:</h1><h1 id="QQ"><a href="#QQ" class="headerlink" title="QQ:"></a>QQ:</h1><h1 id="Weibo"><a href="#Weibo" class="headerlink" title="Weibo:"></a>Weibo:</h1><p>  WeChat: <a target="_blank" rel="noopener" href="http://tva1.sinaimg.cn/large/008gLLJzgy1h6c8g4ncwyj307o09uglz.jpg">http://tva1.sinaimg.cn/large/008gLLJzgy1h6c8g4ncwyj307o09uglz.jpg</a><br>  Github: <a target="_blank" rel="noopener" href="https://github.com/yeae">https://github.com/yeae</a></p>
+<h1 id="how-links-show-you-have-2-choice–text-or-icon"><a href="#how-links-show-you-have-2-choice–text-or-icon" class="headerlink" title="how links show: you have 2 choice–text or icon."></a>how links show: you have 2 choice–text or icon.</h1><p>links_text_enable: false<br>links_icon_enable: true</p>
+<h1 id="Post-page"><a href="#Post-page" class="headerlink" title="Post page"></a>Post page</h1><h2 id="Post-meta"><a href="#Post-meta" class="headerlink" title="Post_meta"></a>Post_meta</h2><p>post_meta_enable: true</p>
+<p>post_author_enable: true<br>post_date_enable: true<br>post_category_enable: true</p>
+<h2 id="Post-copyright"><a href="#Post-copyright" class="headerlink" title="Post copyright"></a>Post copyright</h2><p>post_copyright_enable: true</p>
+<p>post_copyright_author_enable: true<br>post_copyright_permalink_enable: true<br>post_copyright_license_enable: true<br>post_copyright_license_text: Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE<br>post_copyright_slogan_enable: true<br>post_copyright_slogan_text: Do you believe in <strong>DESTINY</strong>?</p>
+<h2 id="toc"><a href="#toc" class="headerlink" title="toc"></a>toc</h2><p>post_toc_enable: true</p>
+<h1 id="Page"><a href="#Page" class="headerlink" title="Page"></a>Page</h1><p>page_title_enable: true</p>
+<h1 id="Date-x2F-Time-format"><a href="#Date-x2F-Time-format" class="headerlink" title="Date &#x2F; Time format"></a>Date &#x2F; Time format</h1><h2 id="Hexo-uses-Moment-js-to-parse-and-display-date"><a href="#Hexo-uses-Moment-js-to-parse-and-display-date" class="headerlink" title="Hexo uses Moment.js to parse and display date"></a>Hexo uses Moment.js to parse and display date</h2><h2 id="You-can-customize-the-date-format-as-defined-in"><a href="#You-can-customize-the-date-format-as-defined-in" class="headerlink" title="You can customize the date format as defined in"></a>You can customize the date format as defined in</h2><h2 id="http-momentjs-com-docs-displaying-format"><a href="#http-momentjs-com-docs-displaying-format" class="headerlink" title="http://momentjs.com/docs/#/displaying/format/"></a><a target="_blank" rel="noopener" href="http://momentjs.com/docs/#/displaying/format/">http://momentjs.com/docs/#/displaying/format/</a></h2><p>date_format: MMMM D, YYYY<br>time_format: H:mm:ss</p>
+<h1 id="stylesheets-loaded-in-the"><a href="#stylesheets-loaded-in-the" class="headerlink" title="stylesheets loaded in the "></a>stylesheets loaded in the <head></h1><p>stylesheets:</p>
+<ul>
+<li>&#x2F;css&#x2F;style.css</li>
+</ul>
+<h1 id="scripts-loaded-in-the-end-of-the-body"><a href="#scripts-loaded-in-the-end-of-the-body" class="headerlink" title="scripts loaded in the end of the body"></a>scripts loaded in the end of the body</h1><p>scripts:</p>
+<ul>
+<li>&#x2F;js&#x2F;script.js</li>
+<li>&#x2F;js&#x2F;tocbot.min.js<h1 id="tscanlin-x2F-tocbot-Build-a-table-of-contents-from-headings-in-an-HTML-document"><a href="#tscanlin-x2F-tocbot-Build-a-table-of-contents-from-headings-in-an-HTML-document" class="headerlink" title="tscanlin&#x2F;tocbot: Build a table of contents from headings in an HTML document."></a>tscanlin&#x2F;tocbot: Build a table of contents from headings in an HTML document.</h1><h1 id="https-github-com-tscanlin-tocbot"><a href="#https-github-com-tscanlin-tocbot" class="headerlink" title="https://github.com/tscanlin/tocbot"></a><a target="_blank" rel="noopener" href="https://github.com/tscanlin/tocbot">https://github.com/tscanlin/tocbot</a></h1></li>
+</ul>
+<h1 id="plugin-functions"><a href="#plugin-functions" class="headerlink" title="plugin functions"></a>plugin functions</h1><h2 id="Mathjax-Math-Formula-Support"><a href="#Mathjax-Math-Formula-Support" class="headerlink" title="Mathjax: Math Formula Support"></a>Mathjax: Math Formula Support</h2><h2 id="https-www-mathjax-org"><a href="#https-www-mathjax-org" class="headerlink" title="https://www.mathjax.org"></a><a target="_blank" rel="noopener" href="https://www.mathjax.org/">https://www.mathjax.org</a></h2><p>mathjax:<br>  enable: true<br>  import: demand # global or demand</p>
+<h2 id="global-all-pages-will-load-mathjax-this-will-degrade-performance-and-some-grammers-may-be-parsed-wrong"><a href="#global-all-pages-will-load-mathjax-this-will-degrade-performance-and-some-grammers-may-be-parsed-wrong" class="headerlink" title="global: all pages will load mathjax,this will degrade performance and some grammers may be parsed wrong."></a>global: all pages will load mathjax,this will degrade performance and some grammers may be parsed wrong.</h2><h2 id="demand-Recommend-option-if-your-post-need-fomula-you-can-declare-‘mathjax-true’-in-Front-matter"><a href="#demand-Recommend-option-if-your-post-need-fomula-you-can-declare-‘mathjax-true’-in-Front-matter" class="headerlink" title="demand: Recommend option,if your post need fomula, you can declare ‘mathjax: true’ in Front-matter"></a>demand: Recommend option,if your post need fomula, you can declare ‘mathjax: true’ in Front-matter</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/19/configure/" data-id="clhdfyci70005m0th6k9ihq26" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-double-system" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/09/19/double-system/" class="article-date">
+  <time datetime="2022-09-19T09:02:29.000Z" itemprop="datePublished">2022-09-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/19/double-system/">double-system</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/19/double-system/" data-id="clhdfyci80007m0thdp2g72tc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-lyrics" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/09/19/lyrics/" class="article-date">
+  <time datetime="2022-09-19T08:18:29.000Z" itemprop="datePublished">2022-09-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/19/lyrics/">lyrics</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_J-o8FpJ-XY">最佳损友</a><br>朋友 我当你一秒朋友<br>朋友 我当你一世朋友<br>奇怪 过去再不堪回首<br>怀缅 时时其实还有<br>朋友 你试过将我营救<br>朋友 你试过把我批斗<br>无法 再与你交心联手<br>毕竟 难得有过最佳损友<br>从前共你 促膝把酒<br>倾通宵都不够<br>我有痛快过 你有没有<br>很多东西今生只可给你<br>保守至到永久<br>别人如何明白透<br>实实在在 踏入过我宇宙<br>即使相处到 有个裂口<br>命运决定了 以后再没法聚头<br>但说过去 却那样厚<br>问我有没有 确实也没有<br>一直躲避的藉口 非什么大仇<br>为何旧知己 在最后<br>变不到老友<br>不知你是我敌友 已没法望透<br>被推着走 跟着生活流<br>来年陌生的<br>是昨日最亲的某某<br>生死之交当天不知罕有<br>到你变节了 至觉未够<br>多想一天 彼此都不追究<br>相邀再次喝酒<br>待 葡萄成熟透<br>但是命运入面 每个邂逅<br>一起走到了 某个路口<br>是敌与是友 各自也没有自由<br>位置变了 各有队友<br>问我有没有 确实也没有<br>一直躲避的藉口 非什么大仇<br>为何旧知己 在最后<br>变不到老友<br>不知你是我敌友 已没法望透<br>被推着走 跟着生活流<br>来年陌生的<br>是昨日最亲的某某<br>早知解散后 各自有际遇作导游<br>奇就奇在 接受了 各自有路走<br>却没人像你 让我 眼泪背着流<br>严重似情侣 讲分手<br>有没有 确实也没有<br>一直躲避的藉口 非什么大仇<br>为何旧知己 在最后 变不到老友<br>不知你又有没有 挂念这旧友<br>或者自己 早就想通透<br>来年陌生的 是昨日 最亲的某某<br>总好于 那日我 没有<br>没有 遇过 某某</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=1205I77ovXo">小情歌</a><br>这是一首简单的小情歌<br>唱着人们心肠的曲折<br>我想我很快乐 当有你的温热<br>脚边的空气转了</p>
+<p>这是一首简单的小情歌<br>唱着我们心头的白鸽<br>我想我很适合 当一个歌颂者<br>青春在风中飘着</p>
+<p>你知道 就算大雨让这座城市颠倒<br>我会给你怀抱<br>受不了 看见你背影来到<br>写下我 度秒如年难挨的离骚</p>
+<p>就算整个世界被寂寞绑票<br>我也不会奔跑<br>逃不了 最后谁也都苍老<br>写下我 时间和琴声交错的城堡</p>
+<p>这是一首简单的小情歌<br>唱着我们心头的白鸽<br>我想我很适合 当一个歌颂者<br>青春在风中飘着</p>
+<p>你知道 就算大雨让这座城市颠倒<br>我会给你怀抱<br>受不了 看见你背影来到<br>写下我 度秒如年难挨的离骚</p>
+<p>就算整个世界被寂寞绑票<br>我也不会奔跑<br>逃不了 最后谁也都苍老<br>写下我 时间和琴声交错的城堡</p>
+<p>你知道 就算大雨让这座城市颠倒<br>我会给你怀抱<br>受不了 看见你背影来到<br>写下我 度秒如年难挨的离骚</p>
+<p>就算整个世界被寂寞绑票<br>我也不会奔跑<br>最后谁也都苍老<br>写下我 时间和琴声交错的城堡</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/19/lyrics/" data-id="clhdfycid000cm0th4ax3hcwc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/07/f/">f</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/07/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/16/Archlinux/">Archlinux</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/10/Systemback/">Systemback</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/08/Path/">Path</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
