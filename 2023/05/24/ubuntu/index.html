@@ -13,7 +13,7 @@
 
 
 
-<title>Python | Hexo</title>
+<title>ubuntu | Hexo</title>
 
 
 
@@ -131,7 +131,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Python</h1>
+            <h1 class="post-title">ubuntu</h1>
             
                 <div class="post-meta">
                     
@@ -140,7 +140,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">May 19, 2023&nbsp;&nbsp;9:01:57</a>
+                        Date: <a href="#">May 24, 2023&nbsp;&nbsp;11:01:38</a>
                         </span>
                     
                     
@@ -149,16 +149,23 @@
         </header>
 
         <div class="post-content">
-            <blockquote>
-<blockquote>
-<blockquote>
-<p>print(‘The quick brown fox’, ‘jumps over’, ‘the lazy dog’)<br>The quick brown fox jumps over the lazy dog<br>print()会依次打印每个字符串，遇到逗号“,”会输出一个空格</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>name &#x3D; input()<br>print(‘hello,’, name)</p>
-<p>name &#x3D; input(‘please enter your name: ‘)<br>print(‘hello,’, name)</p>
-<p>变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型<br>int a &#x3D; 123; &#x2F;&#x2F; a是整数类型变量<br>a &#x3D; “ABC”; &#x2F;&#x2F; 错误：不能把字符串赋给整型变量</p>
+            <p>下面开始安装软件。</p>
+<p>shutter<br>一个非常好用的截图软件。</p>
+<p>安装方法：</p>
+<p>sudo apt-get install shutter<br>simplescreenrecoder<br>好用的录屏软件，实测使用kazam录出来的视频win10无法打开。</p>
+<p>安装方法：</p>
+<p>sudo apt-get install simplescreenrecorder<br>CopyQ<br>剪贴板管理工具，轻量化并且在右上角状态栏可以查看。</p>
+<p>安装方法：</p>
+<p>sudo add-apt-repository ppa:hluk&#x2F;copyq<br>sudo apt-get update<br>sudo apt-get install copyq<br>Caffine<br>阻止系统自动息屏，使用很方便，右上角可以直接开启。</p>
+<p>安装方法：</p>
+<p>sudo add-apt-repository ppa:hluk&#x2F;copyq<br>sudo apt-get update<br>sudo apt-get install copyq<br>Neofetch<br>查看系统状态的工具，Ubuntu必备。</p>
+<p>安装方法：</p>
+<p>sudo add-apt-repository ppa:dawidd0811&#x2F;neofetch<br>sudo apt-get update<br>sudo apt-get install neofetch<br>安装Windows常用软件<br>相比于上面一行命令就能安装的软件，安装Windows上的软件相对麻烦一点。分为以下三步。</p>
+<p>安装git<br>安装deepin-wine环境<br>安装需要的软件容器<br>安装git：依次在终端输入以下命令来安装git。</p>
+<p>sudo apt-get update<br>sudo apt-get upgrade<br>sudo apt-get install git<br>然后使用下面的命令来安装deepin-wine环境。</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git">https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git</a><br>安装好deepin-wine环境后，到下面的网站下载需要的软件的.deb文件。</p>
+<p>QQ：<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/</a><br>微信：<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/</a><br>百度网盘：<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.baidu.pan/">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.baidu.pan/</a><br>最后cd到下载目录，执行安装命令。</p>
+<p>Tim:<br>sudo dpkg -i deepin.com.qq.office_2.0.0deepin4_i386.deb<br>百度网盘:<br>sudo dpkg -i deepin.com.baidu.pan_5.7.3deepin0_i386.deb</p>
 
         </div>
 
@@ -186,10 +193,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2023/05/24/ubuntu/">ubuntu</a>
             
-            
-            <a class="next" rel="next" href="/2023/05/15/RS/">RS</a>
+            <a class="next" rel="next" href="/2023/05/19/Python/">Python</a>
             
         </section>
 
