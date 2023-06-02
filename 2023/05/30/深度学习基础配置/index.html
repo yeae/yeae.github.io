@@ -214,23 +214,15 @@
         </header>
 
         <div class="post-content">
-            <p>windows的命令行（cmd），输入conda env list 查看已安装环境</p>
-<p>如何修改虚拟环境安装位置<br>查看一下conda信息，命令行输入</p>
-<p>conda info</p>
+            <h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><p>windows的命令行（cmd），输入conda env list 查看已安装环境</p>
+<p>命令行输入conda info 查看conda信息</p>
 <p>修改C:\Users\wader下 .condarc（在最下面）</p>
-<p>show_channel_urls: true</p>
-<p>envs_dirs:</p>
-<ul>
-<li>D:\Instance\deep_learning\Virtual_Environment\envs<br>pkgs_dirs:</li>
-<li>D:\Instance\deep_learning\Virtual_Environment\pkgs<br>channels:</li>
-<li><a target="_blank" rel="noopener" href="https://mirrors.bfsu.edu.cn/anaconda/cloud/pytorch/">https://mirrors.bfsu.edu.cn/anaconda/cloud/pytorch/</a></li>
-<li><a target="_blank" rel="noopener" href="https://mirrors.ustc.edu.cn/anaconda/pkgs/free/">https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</a></li>
-<li><a target="_blank" rel="noopener" href="https://mirrors.ustc.edu.cn/anaconda/pkgs/main/">https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</a></li>
-<li>defaults</li>
-</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">show_channel_urls: true</span><br><span class="line"></span><br><span class="line">envs_dirs:</span><br><span class="line">  - D:\Instance\deep_learning\Virtual_Environment\envs</span><br><span class="line">pkgs_dirs:</span><br><span class="line">  - D:\Instance\deep_learning\Virtual_Environment\pkgs</span><br><span class="line">channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/cloud/pytorch/</span><br><span class="line">  - https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</span><br><span class="line">  - https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</span><br><span class="line">  - defaults </span><br></pre></td></tr></table></figure>
+
 <h2 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h2><h3 id="1-在命令行中输入下列指令创建虚拟环境"><a href="#1-在命令行中输入下列指令创建虚拟环境" class="headerlink" title="1 在命令行中输入下列指令创建虚拟环境"></a>1 在命令行中输入下列指令创建虚拟环境</h3><p>conda create -n opencv python&#x3D;&#x3D;3.8.5</p>
 <h3 id="2-输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功"><a href="#2-输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功" class="headerlink" title="2 输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功"></a>2 输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功</h3><p>conda activate opencv</p>
-<h3 id="3-安装程序所需要的包"><a href="#3-安装程序所需要的包" class="headerlink" title="3 安装程序所需要的包"></a>3 安装程序所需要的包</h3><p>pip3 install opencv-python<br>pip3 install torch torchvision torchaudio   <a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a><br>pip install tensorflow&#x3D;&#x3D;2.3.0   <a target="_blank" rel="noopener" href="https://www.tensorflow.org/install?hl=zh-cn">https://www.tensorflow.org/install?hl=zh-cn</a></p>
+<h3 id="3-安装程序所需要的包"><a href="#3-安装程序所需要的包" class="headerlink" title="3 安装程序所需要的包"></a>3 安装程序所需要的包</h3><p>pip3 install opencv-python<br>pip3 install torch torchvision torchaudio   <a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">参考链接</a><br>pip install tensorflow&#x3D;&#x3D;2.3.0   <a target="_blank" rel="noopener" href="https://www.tensorflow.org/install?hl=zh-cn">参考链接</a></p>
+<p><img src="/1.png" alt="RUNOOB 图标"></p>
 
         </div>
 
