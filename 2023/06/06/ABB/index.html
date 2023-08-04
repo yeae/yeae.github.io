@@ -1,155 +1,272 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html class="html-loading">
+		
 
 <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta name="author" content="yeae">
-
-
-
-
-
-<title>ABB | yeae</title>
-
-
-
-    <link rel="icon" href="/favicon.ico">
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
     
-    <link rel="stylesheet" href="/css/style.css">
+      ABB | yeae
     
+  </title>
+  <meta name="author" content="yeae">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
 
 
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/js/script.js"></script>
-    
-    <script src="/js/tocbot.min.js"></script>
-    
-
-
-
-    
-    
-        
-    
-
-
-<meta name="generator" content="Hexo 5.4.2"></head>
-
-<body>
-    <script>
-        // this function is used to check current theme before page loaded.
-        (() => {
-            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
-            const isDark = currentTheme === 'dark';
-            const pagebody = document.getElementsByTagName('body')[0]
-            if (isDark) {
-                pagebody.classList.add('dark-theme');
-                // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
-            } else {
-                pagebody.classList.remove('dark-theme');
-                // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· Light"
-            }
-        })();
-    </script>
-
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">Yeae&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">Yeae&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-            </div>
-        </div>
-    </nav>
-
-</header>
 <script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/header-bg.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
     }
-</script>
-            <div class="main">
-                <div class="container">
-    
-    
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: false,
+	  appId: 'AU8...',
+	  appKey: '4cU...',
+	  serverURLs: 'http' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+	<body>
+		<!-- Preloader -->
 
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">ABB</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">yeae</a>
-                    
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
 
-                    
-                        <span class="post-time">
-                        Date: <a href="#">June 6, 2023&nbsp;&nbsp;20:45:24</a>
-                        </span>
-                    
-                    
-                </div>
-            
-        </header>
 
-        <div class="post-content">
-            <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">Fetching...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">Catalog</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「ABB」
+		
+	</p>
+
+	
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">Tag</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">Gallery</a>
+		</li>
+		
+	
+
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2023/06/06/ABB/" itemprop="url">
+		ABB
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	Updated on
+
+	<a href="/2023/06/06/ABB/" itemprop="url">
+		<time datetime="2023-06-06T12:45:24.000Z" itemprop="dateUpdated">
+	  		2023-06-08
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+						
+			</span>
+			
+			
+
+
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
   <script id="hbeData" type="hbeData" data-hmacdigest="4ff5e9c0496279f71af803d8f91e66f2bfe3f70a4acb03821bf15fdeeca8d1e9">efcad8a7e0fccd1c832a846875f3497e59352dbdea324261d5ce463e333e5a57cf2bbe46d5600012016d900f46178f8baef949b3e93a4de981e30603839551edb1824848f89f8a5320c21e57e013f003fe2ee398cfabb99ee43ae4b461f0bbfe8fe0a7c1fa965e3cc87def8025c3d1d42782437f634dd24ddcc3a283104fd55c36b3a4c97a0961f552cbbd3b1d4bf9635df3906ef253f26274e0ec7a3083b5dd82ccd4494066a20ac064479e287ca1f9dcaed15e8e407b035c942bb63940c66b36784dec13117048c24e6cfdd29508f0623bb71a7e7e623002175c57a3c631aefd6327a4a49f5ea81211ec1184bad5e7356b5aa608d79b56ac91a80214b8cc7603d63b7abc86e3d1d48570e2211e3e23d3d248288855797d3965bb3051dec97ab98b587b0aebeefa94d0113f26bf1ebc93fd4726c80774cd71fc1633063b0b8911da0f16756bc564131e893baedcf9820d1e007038cb87acd5ec3155fece4fc9dd099aac4bf8fa6fa413198bb01dcaf91a392dc41cf8a0a8ba9c27b1ec5671054491f85cd4c64d7943da3fbdb710a83d4e433c80449ce17fa9b946ff7b29c0c14ae471dead6c893518c212f393bc5dc99567600b9b5b0fd7a04a162a03633ed2374352057a41a343452c16a055aef41f84220b30f2cb6bddd0d5a83287e8dfbe7a0684eed6f4ebd20f5532c59115a5a0bd2420a6e750ca197f01dfb54231471333074f466f1726a0b83d09e97ebd1982d3c33e5342043c865cbed04bda45657625281e9a6180c88ae86f0bf7eb355c75c55be926b23dc176fa3f7fa883b542f1479a516f59cb4269a84d7f5dcd9950fc47050f3a3a84b4aa88c3f238581892680915143513ccbfc3008f5f52ba388d79286c33827c4d822c7e889b5a536a650a24356f885e63d56c84c80d43146a0afb75733f7ed4d6e1d4dac52e08aca35dda644c6742967a4184b9fb860c5f603d51aceb00622f67d68cff9a3c5ed82eb79661447b7f8b4600d7c7652c69fef2d067f74ee7822f75b6766c5c2de6e49f86e74dc78f3a578ee35fca2928741ec1d27d9806ef003ca9e28cc36ebf2fecd267e6ae54ff90587670aae18544a636269788333f6abedc1960025a97c9afa28d45a2828d9ba43628741931f824786ec4d7315360bbd38fc4cd3f92fdb02c57c2b39cb5b572a9b2d8cdb33ce2891a4d6c1cfe33fa091f2b4d0efde4c0e861c609a64812d84eb6fb038f30be7f2807c365ec54ec6df07b88727d81a3ae810085f760c2ef06dc5ff0f16342cfdbb1197d8ab6222eaaeb5bf2dfc92f8f0e99211499af241e0cef7662597c5512119c918f53b851d04ab547a266be3bdad19cddab17d019d476225267b264d031df9438217e41b5a490eac2e15eb85fc503bd3069b6308224f131d37b27b32262e95720a207dc456eb58b1cee0d4f92582c9e86707fc2d3b0a26c1e17c22eb3c0c84c647d705bfa6810e4fc86b3238383cfce787b9d40063923050c565e4e561f27d7a803aa45dd55f29ab8c64ef5c16da38019a89bd5d749e14e98e9b1a229379279ecfa88ba10de7733306340239293cee21c12dcb9c0c55ba77c17d7b11ad783a01ee7617ace8f18b00a6969858d30f9942e05612cb718eea2a77d0a13c4790c6bb79a753bcaeccf1ef6fc7f8fdc261e2e07cca6d658467620e09ff744018d436aa9b974a452f8207c81571284af085e8c68d317682c08d7f360da1502522086b083f86efe0537fb6e5fc2c3493e8dcdc5bfff69e9ee4fdbce8199d8fdef74113e8f7c3d771605f4ffb9bde40ab33a82aa841388989eef72d9ceb7957a4cc63462236018954e73a531d204fe6b60f79649f3f67f1b55c31834076527ef5281c07e967bf7230ef3fcb28425b60c6253781710fababd81563ed3138c322334e8356301259f730b6366d81a5f23543bcd4f9addbef375113524873220f367dd5a39c22d5fdda26907bf4a59ca96da65887b225af67fd2b24e004018c25078cbc1db23d3f218eb29c8cbcbf6bf0cfa0dcd7d2844b6170643ac43c54309568ba6322abe3040a284f51b3cfc36252c741d1bbd544159f86f16a1bb55c7a3f55e7161911a313aced86bace21a7264ec089f2bcab512e1fda1072ccfdce4a8cdf8dccf9a6a2e6a9990d0dd9d88460356462635ad407a9cfe9f296473a59d639292a5d5211b0acf061bf71bec9a4bc93a1a1c7f784d45bd405969b1e2387e480f06048c108c7b938f925588e50d494625395f03073e1e3f431721be2df2f7c60863897867a8282dbd03fa2f297c6cc262a28e53626b82128a574eef1f80e15ba36a1c8b774efeba58ce3752fba25152257683e759002278edd20c439d00723152bde426067799bcee7d58da4e85b93a3fdf65d2fc82b46cd4f2b71490647e6013cdb02c79a523798cb7196c3e9317b26c94318b24e75d94616fa1d082324d503d106e6ce4ea93ffc6ccf6432ac58682bf34b6a1f0d3761650fa277b6b3c0893991120769005ac3d31be19ec0cc2c7c34f7a8c2fbf3b1c5f5504e47990d68806496792684f2643ee6dbb2898ae1e10506a93f4317ff178983e27c8fd0666eedcc788d885d8bc5f35addae0bdf35616720911cd0b80c81718d97d9469d2f77fdd73bf6def2ac140d18edb6fc0193818d6359caf95d5b2eafbdd487f8f51e514d43adb50bba7169add2d0d5a408a14df6437eface4a7bf4a5de846a03b32f23e34421d0ac17f9edfbca56287a8db7a17a26d20deec6bd3c8e91f7a4301e77618e8bb6af84021b42f081bf7f7c7348773e95170ad7f3cf340ba297dac1bec89e42eb2a24ad77908987775929978a312d4b5813b98e117bed03742e5537e3c777d2f324586a245ce0eeda4d9abd59ee5db3cf6df9539008fc84bcb587e6b231028ce6310c5d6e74c2bd25cc75b9d8d3293c717d2f5820feac3394b8f3b9d00a0117ed6f86a1394a70c956f1fa92194cfcf2c9a9213c8dae03220dc1e1cab55c57ea4c1938b7dbc4deb6406fa7ee1ed74ac03fd5975d7c9fb19ed3f8bf50433b82885a99b4747cf3efe6d6c6e67b4486243c29692919a53e58c9aa4e34455fe65faacd2c249105b9dcb66168dc36f21aef573d403a85a951a7e87dc8c5ed27fd12f9a2dcb25ca83375508e956f8ec4cc8cbde26dc6e08fd4e6726af094fff0337ed6c2cdafb6ff85a1685f5fd7f6927318c9d603ee41e404902bbbb94fce9eb1b64c192e44a61f36509829b40dec49559d08e4e6c74b7ad9a96b5dd1a12432413d4e7651c6a3985fbb7006285ac3ae42ab0ab0ca1fc0e30b70045efca12e0953e0d1beae797fb88be708e27195c07e8747f6da837d27f07d80e6676a2c31326b40609099d0cbb915297e82c156f2153163d4c6f464e01cb3690e2f87d908441610a703c895a89965f3f77304942e22227e0eda78fe3aee1ad7ee1884c6b4cac24f27a0929d1908292e2e1f18c9ced1a1468344233b4e846e0316739b97a9c1cfcd4cd800faa61ed07b4e4c95efd60e9bbbf5353371aeb248421c6debac5fc51b1ec754f1030e527e171490ae3a75cb77b688b6b8391e42d3be70fc0725a5411daacd1b6b54030b2df804f1f8d8da6f194197a962b5f664ba1832344e905871900d57fc242df316f5f60117163ab22703a9b0f282e115e785f74cc1276c91e30a008769309a1e5fb3d53019e0e9f1e3f0af677380cbb59ef9fae2299de3a6b9cf74200249e4e92d802485c8ca3e7ab9e071611ae152132cd6406729b8c0558dcda5aeb5b5da33f7f3a4f284463c8240653f768c3f188db3cdfeaf51e3d6fa46f6f93f7dd26f79975b27684055d1b7280ed52b7007df965614f4af0a2850823b761961a475895947fb0a3dfd028f87d786c31d59382c518265aa4589c31c25015642579a0adf378c56fdbad7cf282c3dfccb97eba9896ec7be9e5391cf85ebe68abcab938e2341b9008f24cac4dfab79aafd0d6b40ba9b59f929b10dafb90a64fc9f4d279a5048fd8d7f0a809303fc09248bde459404288b56ac878d689a4cf1bbbc158385a59ece460d56013aaeeac643e3d634f4df8165a12107b896edfee78421fc4c4528623d68823f847afca087f37624c119276e50cd2efb378d3ff0df7e99befe38fe500e1192384e6c66beb1358f57b1fa1d89753923d56a4094ffa5621268035e0098a67afcf811ea495bdb82bbeaf727e4880819abade5f829930de71a0d648a2d62d14ae6b85df055d4e069a7eaeaa75818995094192c360fac2ef09fe018f1f9a919a3a5bac8cb4a204016ffc6cd07a55572632bd80e58639ca0c9a1c77f7208605e0e4d80d301a9ec277cf34d4b8896cae0d3d9faa0dd3f82dc3b0c88492cf3a0c857b7f5e4e9821449214dc204e100a23f92b89a6342a85fca9aec8551faf0683d21d73831f4cbff29c2375b3241dfda35b21d4e98cf842a701ad35cad17e3828c58e359c1f42d348433babe91eb69d49c9422c634644a7611c82ea9b6aa84c59d67c077d802f9e43222d7fdfc91ccc1d7e397045c755e6113309b4e50da726cfb58e8d311da6846c958b2a2839a3f4f196cb272f83d6c583c45d4e4de660cf5e181302a2e8edb1dfc6b69f19f1603d7fb44d6e6a7a559dc5c94df26f5141ce51448f5553c2cb7dc09ef2b80471bfe27b9ef402479c60a4b7e3745f390bd9c86c022b4b1a899219b73b65c1fb29c9ca65653446f4550d52d7d30520204d5f889f7adc85a56622784fe9505122a399fe830ea0e8da0616baaa34ce0f4c687a1a24385891f6f1e51794fd958e40648abf7add11c7c54788bf42e9c839ee06cf2671cdf9df1163c7fc0eb8d1e0d1ec731f565627ad49c1118cfbee29c7efa927b33319389d25aa4eb1bacf34d3428557e546c8779e77e7a8887ac88c0bbc6604ee2e5f27e8de3588ad29343bc3f6d3e3eb1df023d6cd35a82388b00d64c02d4f3213f371ee8afe78b4c87f500bc91e7d4be157f6730db08ddabcd3f580aa792e96feab4e1a3ac0245810f4601e60d4b6a2a1580ad85d4790abc39653ea575374ac514a4648a585f374cf738fa33602c9417ad612ccdba0b3b7e0a0ddc9bf539bc7a30a51d3f3c740f5a3d33c22874003433bb5c2cb25edaa38cfc09df18a6328e67882b794a22f37a96474923c60ff0882391e1d0e024bda9e99014abd9fdbdc1479a15a25f96bc47ac8668ef2170e74f7afc03181a76be86abf3ad234802eb495166ec658f6c2762399f3dfcd44fe5074ebacd8e2597d9c7256220571f034b5ec761792a7c2fee80ceca7ce04920b4099f8206dc2149a936649b0c2eedd82703da8a1968bc1b71afeb034aa5ec85e031faa03def8162623a47909b9e075eaf6b39ca68a6b26285b65ebc326547ca759d20ce686c1e97b8c30b99c2c98d90905f8b9b8cf3988f3782ce2d244255f4c8c2c1ade934794997916fb1a3a41010c1bd90ba55f760292835720c2f7efc59ae65fb1eda0440c6f8412eaafc0d3e67a13c995a455c92f1f1d36a02fb82ae905c8edfa8e54bd495e698dfe6aade3891867e7b0a3e7ef27ebe4eb3fc4fda82acab173645e0d8f0a325d8614dea8c416de6c1e5c16f619b29936035f2d43dd93c89389c0b50c69cf077022e27611f7ed5055e817670bbbb6f127b486b4a1631dca0442d9edc59f665660d73cdccfa145f7fbc54b352fb208a1bd73ac3f926b47ed5620342f668b01318dd109f9d35552c80f47a3cd60723c42d09eb5203c8276fe765c2152dd02a9126a382c7846e2e35b0cbdef36971c7ed1a93e8c76c337e7cd7b49547828617f4d7cfc9802287c918a36c955a1deb64b600cf14b380af51ca650e4e9036c30d7a7aa85b064ab5183b99a93ebccdb68bb001cd624ffe4b66f846ba6f053608eb3e9c24172f3e12f2032d6067fd828c801f7cc229410cefca64e1f1a7250efe2a952d16b560a81cecc6ddeae94415c93acabc5ce82c92da704e7f80d9a97da4acaba7d4e22d1c54a82a9bc6cf5b8514c90d8ed34fb31622f2c25214d3826df5014526c86646ebd3f9bdca3661dc741e8a9f2134afe976be64a18921b13c74cc51d7e6c853ad4fda71612eaaa8ed177abb8885fefd00cea8a80428fb6af92db526e2b7e648d435ee4b20296bfe11fc6d3b2f447062510d35ff8d250ece557c72a262c367039955888126797f439068533ce2e9c08fbc78087b3477e848e72a15b9c13c8891c80ead263fa0683ab7d66a9f34465df223766a945e911de6d418d00556234f9f38d6c5f11f3414f4581de92e655cff1bd2f0da0d124cbe3bd6469998ce70d728251cb9ccba7693cb62566a9d0f174f1d671a8642a9083f33951a5c872612ce067b4b1ef1e8a8f5e9b67a70035b25e97650e89df38a409038bbaec878da13f5eca6cb9f6916955541746087f38d7c200026b4ec7cbf68c9cffaea41bb047a880082f2ae879369f2cffaade5f09cadb28f0108267145b4d847386607f51605bab3d1f83bbbbea24e2c0f5b41acf012bf8c589fc1a008c4b70fcd19c70ba9fc58ad5fbc4379795c5e0789ac9719656c0e2fcf8bc409f9e71462b2dbd69bb4cc13fcacff5d95556a26524fe11bcca082e2e43ae9fca72acf4f15849903543c43599b3b9456255b8d253a496cdb4f3f0913633f5405b891f5b2678969ffaa079067bde8aa17a157912324e57c04cbded70be5681fd0d543baffbab4e9a813ef8be62950666fb6818d8aa342b32bfde0fb45b24c4620eebb6529ef1d4cb740e48d61de238d02cc4fbd923210aeb4a29d7f1a6b5c83bead999c4a2401ef2705b24e6830213eb11f365abaa7ae3799ff183dd9b18de58966a02a70ef330736c348f827ed0ccd0fc993af3e130106cd0648f0e25a0436d3f2f26b56065097e1322367923772723cecec9e05c8fc493df27848ee7c4b18f5031ad7c0310f1e69c9e56c00a3183e12807e55013f93df515b0ae20c3800705e95e05c8ccef7da2ace06b6eb857daf463e13b3d647503161357fc21d5bf51d69c2c2f47189f53bc078e7fdccd206da4c28af302de66f51e68e26d06f59051dd9a52e640ef6e8d0713c5f0413448c609267e980d4643d34c0234873a17b31d28c00d107c6a0e1f11f0d849eae19cbd140f76187c5fee4cf27027e2b18a26ea6bb50b0626b0a32047b464b6700b2a40dffc05956fbbf5408d11df1befec1af74eb2f2b4e96c6103c76fe01a835c4f79d27f1b1077955d43d5d3a22d2fe7a54fa66bdf46d86fca7f134a3c8a36d490ddafc745a07a89b099a24fc1edd29d151fd4bb912e1019105d0520388a5598b2323f5b84b042e117376f03db8c1255b6f9d96faf3a18fcd74a8e51580fe9b30f3d97363ac3d20257bd9f441578d3e429fe746d0b38632b4d2944d49c6a6113644fb5235e8ccdbaad341f16703379ac9fe7e34e986cfbe59766625f2edbc01909f137e332affe1246408476104f5c587c3eca24d0ee37c15423ef83b1b22c426b90d2d6ac8ec52015599bebe78bc71b7c7d9f1863345429e36588f31ef717d58298835ba5530b76d694585e6c3c85e8c01a2384b3c89b98b497f29168891dfbb539b18589e9654667dcbb7ba364073c436f9df263a8fd6860c1862f608beb193cf9ffb85ea5d4a1a9ff332a4f3c4035</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
@@ -160,52 +277,594 @@
     </div>
   </div>
 </div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-        </div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                
-
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/2023/06/09/hexo-github/">hexo_github</a>
-            
-            
-            <a class="next" rel="next" href="/2023/06/05/colab/">colab</a>
-            
-        </section>
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">Related post</div>
+					<div>Comment</div>
+					<div>Share</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">To Top</a>
+		
+			<a href="/2023/06/09/hexo-github/" title="hexo_github" rel="prev">
+				&laquo;Pre post
+			</a>
+		
+		
+			<a href="/2023/06/05/colab/" title="colab" rel="next">
+				Next post&raquo;
+			</a>
+			
+	</span>
 
 
-    </article>
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/08/04/xinzi/" title="xinzi">
+								xinzi			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								八月 4日, 2023				
+							</p>
+							<p class="relate-post-content">
+								
+  0c0e17c02eabe5ffe97f1fc521531f20492bfae7fbcec5951620ec153a7b590f4b93d9aef6884e10fa10804897fcdd0e73d73f8a7f754afaba...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/08/04/xinzi/" title="xinzi">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="xinzi"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/07/29/eee/" title="eee">
+								eee			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								七月 29日, 2023				
+							</p>
+							<p class="relate-post-content">
+								
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/07/29/eee/" title="eee">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="eee"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/07/07/yolov5/" title="yolov5">
+								yolov5			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								七月 7日, 2023				
+							</p>
+							<p class="relate-post-content">
+								数据集划分安装labelimg~ pip install labelimg -i https://pypi.tuna.tsinghua.edu.cn/simpleA：切换到上一张图片
+D：切换到下一张图片
+W：调出标注十字架
+del ...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/07/07/yolov5/" title="yolov5">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="yolov5"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/06/14/%E9%93%B6%E8%A1%8C%E5%8D%A1%E8%AF%86%E5%88%AB/" title="银行卡识别">
+								银行卡识别			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								六月 14日, 2023				
+							</p>
+							<p class="relate-post-content">
+								环境配置创建虚拟环境通过anaconda创建基于python3.8.5 名为opencv的虚拟环境conda create -n opencv python==3.8.5激活虚拟环境conda activate open在虚拟环境中安...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/06/14/%E9%93%B6%E8%A1%8C%E5%8D%A1%E8%AF%86%E5%88%AB/" title="银行卡识别">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="银行卡识别"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/06/09/hexo-github/" title="hexo_github">
+								hexo_github			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								六月 9日, 2023				
+							</p>
+							<p class="relate-post-content">
+								安装node githexo安装  npm install -g hexo-cli在博客文件夹里1 hexo init生成一系列文件2安装npmnpm install3、启动服务站点hexo ghexo server
+
+生成SSH添加...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/06/09/hexo-github/" title="hexo_github">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="hexo_github"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/06/05/colab/" title="colab">
+								colab			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								六月 5日, 2023				
+							</p>
+							<p class="relate-post-content">
+								[参考链接]（https://blog.csdn.net/qq_51302564/article/details/115605994）[参考链接] (https://blog.csdn.net/qq_38736504/article/...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/06/05/colab/" title="colab">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="colab"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/05/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/" title="深度学习基础配置">
+								深度学习基础配置			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								五月 30日, 2023				
+							</p>
+							<p class="relate-post-content">
+								软件安装windows的命令行（cmd），输入conda env list 查看已安装环境
+命令行输入conda info 查看conda信息
+修改C:\Users\wader下 .condarc（在最下面）
+123456789101...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/05/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/" title="深度学习基础配置">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="深度学习基础配置"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/05/28/pytorch-demo/" title="pytorch_demo">
+								pytorch_demo			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								五月 28日, 2023				
+							</p>
+							<p class="relate-post-content">
+								(&lt;class ‘ModuleNotFoundError’&gt;, ModuleNotFoundError(“No module named ‘torchvision’”), &lt;traceback object at 0...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/05/28/pytorch-demo/" title="pytorch_demo">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="pytorch_demo"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/05/27/ssh/" title="ssh">
+								ssh			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								五月 27日, 2023				
+							</p>
+							<p class="relate-post-content">
+								ps -e |grep ssh 查看sudo apt install openssh-server 安装ssh &#121;&#101;&#x61;&#101;&#64;&#x31;&#57;&#x32;&#46;&#x31;&#x3...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/05/27/ssh/" title="ssh">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="ssh"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/05/19/Python/" title="Python">
+								Python			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								五月 19日, 2023				
+							</p>
+							<p class="relate-post-content">
+								
+
+
+print(‘The quick brown fox’, ‘jumps over’, ‘the lazy dog’)The quick brown fox jumps over the lazy dogprint()会依次打印每...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/05/19/Python/" title="Python">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Python"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
 </div>
 
-            </div>
-            <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© yeae | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+
+
+	 
+	
+<script src="/plugin/clipboard/clipboard.js"></script>
+
+	<script>
+		// Copy code !
+	    function preprocessing() {
+	        $("#article-content .highlight").each(function() {
+	            $(this).wrap('<div id="post-code"></div>');
+	        })
+
+	        $("#article-content #post-code").each(function() {
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            let languageClass = $(this).next().attr('class'),
+	                language = ((languageClass.length > 9) && (languageClass != null)) ? languageClass.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+	            $(this).append('<span class="copy-btn icon-paste"></span>');
+	        });
+	    }
+
+		function copy() {
+		    $('#article-content #post-code').each(function(i) {
+		        let codeCopyId = 'codeCopy-' + i;
+
+		        let codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+   
+			let clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn icon-clipboard1');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn icon-paste');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');   
+			});
+			
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		}
+		
+		(function copyCode(){
+			if ($('.layout-post').length) {
+			    preprocessing();
+			    copy();
+			} 
+		})();
+	</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">Tag</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">Gallery</a>
+		</li>
+		
+	
+
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2023, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
 </footer>
+		
+	<!-- Local or hitokoto! -->
 
-    </div>
-</body>
+	
+<script src="/plugin/motto/motto.js"></script>
 
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+  
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
 </html>
