@@ -13,7 +13,7 @@
 
 
 
-<title>深度学习基础配置 | yeae</title>
+<title>深度学习配置 | yeae</title>
 
 
 
@@ -196,7 +196,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">深度学习基础配置</h1>
+            <h1 class="post-title">深度学习配置</h1>
             
                 <div class="post-meta">
                     
@@ -214,17 +214,31 @@
         </header>
 
         <div class="post-content">
-            <h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><p>windows的命令行（cmd），输入conda env list 查看已安装环境</p>
-<p>命令行输入conda info 查看conda信息</p>
+            <h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><p>windows的命令行（cmd），输入<code>conda env list</code> 查看已安装环境</p>
+<p>命令行输入<code>conda info </code>查看conda信息</p>
 <p>修改C:\Users\wader下 .condarc（在最下面）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">show_channel_urls: true</span><br><span class="line"></span><br><span class="line">envs_dirs:</span><br><span class="line">  - D:\Instance\deep_learning\Virtual_Environment\envs</span><br><span class="line">pkgs_dirs:</span><br><span class="line">  - D:\Instance\deep_learning\Virtual_Environment\pkgs</span><br><span class="line">channels:</span><br><span class="line">  - https://mirrors.bfsu.edu.cn/anaconda/cloud/pytorch/</span><br><span class="line">  - https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</span><br><span class="line">  - https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</span><br><span class="line">  - defaults </span><br></pre></td></tr></table></figure>
 
-<h2 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h2><h3 id="1-在命令行中输入下列指令创建虚拟环境"><a href="#1-在命令行中输入下列指令创建虚拟环境" class="headerlink" title="1 在命令行中输入下列指令创建虚拟环境"></a>1 在命令行中输入下列指令创建虚拟环境</h3><p>conda create -n opencv python&#x3D;&#x3D;3.8.5</p>
-<h3 id="2-输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功"><a href="#2-输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功" class="headerlink" title="2 输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功"></a>2 输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功</h3><p>conda activate opencv</p>
-<h3 id="3-安装程序所需要的包"><a href="#3-安装程序所需要的包" class="headerlink" title="3 安装程序所需要的包"></a>3 安装程序所需要的包</h3><p>pip3 install opencv-python<br>pip3 install torch torchvision torchaudio   <a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">参考链接</a><br>pip install tensorflow&#x3D;&#x3D;2.3.0   <a target="_blank" rel="noopener" href="https://www.tensorflow.org/install?hl=zh-cn">参考链接</a><br>pip install labelimg -i <a target="_blank" rel="noopener" href="https://mirror.baidu.com/pypi/simple">https://mirror.baidu.com/pypi/simple</a><br>pip install -r requirements.txt</p>
+<h2 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h2><h3 id="1-在命令行中输入下列指令创建虚拟环境"><a href="#1-在命令行中输入下列指令创建虚拟环境" class="headerlink" title="1 在命令行中输入下列指令创建虚拟环境"></a>1 在命令行中输入下列指令创建虚拟环境</h3><p><code>conda create -n opencv python==3.8.5</code></p>
+<h3 id="2-输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功"><a href="#2-输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功" class="headerlink" title="2 输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功"></a>2 输入下列指令激活虚拟环境，出现下图所示的小括号表示环境激活成功</h3><p><code>conda activate opencv</code></p>
+<h3 id="3-安装程序所需要的包"><a href="#3-安装程序所需要的包" class="headerlink" title="3 安装程序所需要的包"></a>3 安装程序所需要的包</h3><p><code>pip install -r D:\Instance\deep_learning\Project\yolov5_liuchao\requirements.txt</code></p>
 <h3 id="4-换源"><a href="#4-换源" class="headerlink" title="4 换源"></a>4 换源</h3><p>pip config set global.index-url <a target="_blank" rel="noopener" href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a>  –trusted-host pypi.tuna.tsinghua.edu.cn</p>
-<p>删除环境<br>conda remove -n py36 –all</p>
-<p>退出环境<br>conda deactivate  </p>
+<h2 id="Mixup"><a href="#Mixup" class="headerlink" title="Mixup"></a>Mixup</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pp4y1573M/?spm_id_from=333.999.0.0&vd_source=29ff4278a645d80ba303d9335bd02a5a">模型解析视频</a></p>
+<p>pytorch tensorflow<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV187411T7Ye/?vd_source=29ff4278a645d80ba303d9335bd02a5a">官方demo</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1rL4y1n7p3?p=2&vd_source=29ff4278a645d80ba303d9335bd02a5a">注意力机制</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV15v411W78M/?spm_id_from=autoNext&vd_source=29ff4278a645d80ba303d9335bd02a5a">注意力机制2</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1s84y1775U/?spm_id_from=333.337.search-card.all.click&vd_source=29ff4278a645d80ba303d9335bd02a5a">注意力机制3</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV15g4y1g7bM/?spm_id_from=333.337.search-card.all.click&vd_source=29ff4278a645d80ba303d9335bd02a5a">biformer</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2226405">论文</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1rL4y1n7p3/?spm_id_from=333.788.recommend_more_video.0&vd_source=29ff4278a645d80ba303d9335bd02a5a">bubbliiimg</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1rL4y1n7p3/?spm_id_from=333.788.recommend_more_video.0&vd_source=29ff4278a645d80ba303d9335bd02a5a">bubbliiimg2</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ps4y137iH?p=1&vd_source=29ff4278a645d80ba303d9335bd02a5a">bubbliiimg3</a></p>
+<p><a target="_blank" rel="noopener" href="https://aitechtogether.com/article/27846.html">全部更换</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_50008473/article/details/124590939">全部更换2</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46498587/article/details/122311244#Conv%20%E6%A8%A1%E5%9D%97">YOLOV5 网络模块解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pp4y1573M/?spm_id_from=333.999.0.0&vd_source=29ff4278a645d80ba303d9335bd02a5a">yolov5 parse</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1BD4y1W7FS/?spm_id_from=333.788.top_right_bar_window_history.content.click&vd_source=29ff4278a645d80ba303d9335bd02a5a">图解yolov5结构</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq1198768105/article/details/126463741?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-126463741-blog-125068608.235%5Ev38%5Epc_relevant_anti_t3_base&spm=1001.2101.3001.4242.2&utm_relevant_index=4">图解yolov5结构2</a></p>
 
         </div>
 
