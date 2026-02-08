@@ -76,4 +76,83 @@
         });
     });
 
+    // Horizontal Scroll Auto-Scroll on Hover
+    class HorizontalScrollAutoScroll {
+        constructor(container) {
+            this.container = container;
+            this.isScrolling = false;
+            this.animationId = null;
+            this.EDGE_THRESHOLD = 80;  // 边缘触发区域（像素）
+            this.MAX_SPEED = 8;  // 最大滚动速度
+
+            this.init();
+        }
+
+        init() {
+            this.container.addEventListener('mousemove', (e) => this.onMouseMove(e));
+            this.container.addEventListener('mouseleave', () => this.stopScroll());
+        }
+
+        onMouseMove(e) {
+            const rect = this.container.getBoundingClientRect();
+            const relativeX = e.clientX - rect.left;
+            const speed = this.calculateSpeed(relativeX, rect.width);
+
+            if (Math.abs(speed) > 0.1) {
+                if (!this.isScrolling) {
+                    this.startScroll(speed);
+                }
+            } else {
+                this.stopScroll();
+            }
+        }
+
+        calculateSpeed(x, width) {
+            // 右边缘检测
+            if (x > width - this.EDGE_THRESHOLD) {
+                const dist = width - x;
+                return this.MAX_SPEED * (1 - dist / this.EDGE_THRESHOLD);
+            }
+            // 左边缘检测
+            if (x < this.EDGE_THRESHOLD) {
+                return -this.MAX_SPEED * (1 - x / this.EDGE_THRESHOLD);
+            }
+            return 0;
+        }
+
+        startScroll(speed) {
+            this.isScrolling = true;
+            const scroll = () => {
+                this.container.scrollLeft += speed;
+
+                // 检查是否到达边界
+                if (this.container.scrollLeft <= 0 ||
+                    this.container.scrollLeft >= this.container.scrollWidth - this.container.clientWidth) {
+                    this.stopScroll();
+                    return;
+                }
+
+                if (this.isScrolling) {
+                    this.animationId = requestAnimationFrame(scroll);
+                }
+            };
+            this.animationId = requestAnimationFrame(scroll);
+        }
+
+        stopScroll() {
+            this.isScrolling = false;
+            if (this.animationId) {
+                cancelAnimationFrame(this.animationId);
+                this.animationId = null;
+            }
+        }
+    }
+
+    // 初始化所有横向滚动容器
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.posts-scroll-container').forEach(container => {
+            new HorizontalScrollAutoScroll(container);
+        });
+    });
+
 })();

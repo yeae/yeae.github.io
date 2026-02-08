@@ -32,26 +32,43 @@
                 2023-12-06
             </time>
             
+            <span class="post-separator">·</span>
+            <span class="post-category-inline">
+                <a class="category-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+            </span>
+            
         </div>
         <h1 class="post-title">博客迁移</h1>
     </header>
 
     <div class="post-content">
-        <p>建立hexo分支设为默认<br>拉取hexo分支到本地<br>保留hexo分支中git文件push到hexo分支<br>.git和到本地全部文件push到hexo分支</p>
-<p>同时更新master和hexo分支</p>
-<p>git add -A<br>git commit -m “备份Hexo(提交的描述)”<br>git push origin hexo</p>
-<p>hexo clean<br>hexo d -g &#x2F;&#x2F; 更新hexo中的静态资源文件</p>
-<p>git pull<br>git add -A<br>git commit -m “描述”<br>git push origin hexo</p>
+        <h2 id="建立-hexo-分支"><a href="#建立-hexo-分支" class="headerlink" title="建立 hexo 分支"></a>建立 hexo 分支</h2><ol>
+<li>建立 hexo 分支并设为默认分支</li>
+<li>拉取 hexo 分支到本地</li>
+<li>保留 hexo 分支中 git 文件，push 到 hexo 分支</li>
+<li>将 .git 和本地全部文件 push 到 hexo 分支</li>
+</ol>
+<h2 id="同时更新-master-和-hexo-分支"><a href="#同时更新-master-和-hexo-分支" class="headerlink" title="同时更新 master 和 hexo 分支"></a>同时更新 master 和 hexo 分支</h2><h3 id="备份-Hexo-源文件到-hexo-分支"><a href="#备份-Hexo-源文件到-hexo-分支" class="headerlink" title="备份 Hexo 源文件到 hexo 分支"></a>备份 Hexo 源文件到 hexo 分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;备份Hexo(提交的描述)&quot;</span></span><br><span class="line">git push origin hexo</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新静态资源到-master-分支"><a href="#更新静态资源到-master-分支" class="headerlink" title="更新静态资源到 master 分支"></a>更新静态资源到 master 分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g  <span class="comment"># 更新 hexo 中的静态资源文件</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="同步更新"><a href="#同步更新" class="headerlink" title="同步更新"></a>同步更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;描述&quot;</span></span><br><span class="line">git push origin hexo</span><br></pre></td></tr></table></figure>
 
     </div>
 
+    
+    <footer class="post-footer">
+        <div class="post-tags">
+            <a class="tag-none-link" href="/tags/Git/" rel="tag">Git</a>, <a class="tag-none-link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="tag-none-link" href="/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/" rel="tag">博客部署</a>
+        </div>
+    </footer>
     
 </article>
 
 <nav class="post-nav">
     
-    <a href="/2026/02/07/rustdesk-md/" class="prev">
-        ← rustdesk.md
+    <a href="/2026/02/07/guitar/" class="prev">
+        ← 
     </a>
     
     
